@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { TurmasComponent } from './turmas/turmas.component';
 import { FormTurmaComponent } from './turmas/form-turma.component';
+import { TurmaService } from './turmas/turma.service';
 
 @NgModule({
   imports: [
@@ -21,7 +22,9 @@ import { FormTurmaComponent } from './turmas/form-turma.component';
     TurmasComponent,
     FormTurmaComponent
   ],
-  providers: [],
+  providers: [
+    TurmaService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

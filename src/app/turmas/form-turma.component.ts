@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { TurmaService } from './turma.service';
+import { Turma } from './turma';
+
 
 @Component({
   selector: 'form-turma',
@@ -6,10 +10,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./form-turma.component.css']
 })
 export class FormTurmaComponent implements OnInit {
+  @Input() turma: Turma = new Turma();
 
-  constructor() { }
+  constructor(private turmaService: TurmaService) { }
 
   ngOnInit() {
+  }
+
+  save(): void {
+    console.log(this.turma);
+    this.turmaService.getTurmas().then(turmas => turmas.push(this.turma));
   }
 
 }

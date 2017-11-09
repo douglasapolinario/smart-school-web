@@ -1,4 +1,7 @@
+import { TurmaService } from './turma.service';
 import { Component, OnInit } from '@angular/core';
+
+import { Turma } from './turma'
 
 @Component({
   selector: 'app-turmas',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TurmasComponent implements OnInit {
 
-  constructor() { }
+  turmas: Turma[];
+
+  constructor(private turmaService: TurmaService) { }
 
   ngOnInit() {
+    this.getTurmas();
   }
 
+  getTurmas(): void {
+    this.turmaService.getTurmas().then(turmas => this.turmas = turmas);
+  }
 }
