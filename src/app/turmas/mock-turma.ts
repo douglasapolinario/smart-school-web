@@ -9,4 +9,4 @@ export const TURMAS: Turma[] = [
     {id: 6, ano: 3, turma: 'B', coordenador: 'Marta', etapa: 'Fundamental', periodo: 'Tarde'},
     {id: 7, ano: 1, turma: 'A', coordenador: 'Pedro', etapa: 'Medio', periodo: 'Manha'},
     {id: 8, ano: 1, turma: 'B', coordenador: 'Marta', etapa: 'Medio', periodo: 'Tarde'}
-]
+];

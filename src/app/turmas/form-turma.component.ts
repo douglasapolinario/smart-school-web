@@ -5,7 +5,7 @@ import { Turma } from './turma';
 
 
 @Component({
-  selector: 'form-turma',
+  selector: 'app-form-turma',
   templateUrl: './form-turma.component.html',
   styleUrls: ['./form-turma.component.css']
 })

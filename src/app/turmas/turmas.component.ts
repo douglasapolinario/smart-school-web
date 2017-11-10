@@ -1,7 +1,7 @@
 import { TurmaService } from './turma.service';
 import { Component, OnInit } from '@angular/core';
 
-import { Turma } from './turma'
+import { Turma } from './turma';
 
 @Component({
   selector: 'app-turmas',
