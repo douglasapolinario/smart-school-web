@@ -16,6 +16,7 @@ export class TurmasComponent implements OnInit {
 
   ngOnInit() {
     this.getTurmas();
+    console.log();
   }
 
   getTurmas(): void {

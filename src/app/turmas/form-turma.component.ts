@@ -19,7 +19,10 @@ export class FormTurmaComponent implements OnInit {
 
   save(): void {
     console.log(this.turma);
-    this.turmaService.getTurmas().then(turmas => turmas.push(this.turma));
+    this.turmaService.getTurmas().then(turmas => {
+      turmas.push(this.turma);
+      console.log(turmas);
+    });
   }
 
 }
