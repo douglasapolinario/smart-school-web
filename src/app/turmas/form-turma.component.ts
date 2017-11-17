@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+import 'rxjs/add/operator/switchMap';
 
 import { TurmaService } from './turma.service';
 import { Turma } from './turma';
@@ -12,17 +14,23 @@ import { Turma } from './turma';
 export class FormTurmaComponent implements OnInit {
   @Input() turma: Turma = new Turma();
 
-  constructor(private turmaService: TurmaService) { }
+  constructor(
+    private turmaService: TurmaService,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    this.route.paramMap
+      .switchMap((params: ParamMap) => this.turmaService.getById(+params.get('id')))
+      .subscribe(turma => this.turma = turma);
   }
 
   save(): void {
-    console.log(this.turma);
-    this.turmaService.getTurmas().then(turmas => {
-      turmas.push(this.turma);
-      console.log(turmas);
-    });
+    this.turmaService.save(this.turma);
+  }
+
+  delete(): void {
+    this.turmaService.delete(this.turma);
   }
 
 }

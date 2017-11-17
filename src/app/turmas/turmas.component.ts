@@ -16,10 +16,10 @@ export class TurmasComponent implements OnInit {
 
   ngOnInit() {
     this.getTurmas();
-    console.log();
+    console.log(this.turmas);
   }
 
   getTurmas(): void {
-    this.turmaService.getTurmas().then(turmas => this.turmas = turmas);
+    this.turmaService.getAll().then(turmas => this.turmas = turmas);
   }
 }

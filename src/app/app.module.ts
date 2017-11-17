@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { TurmasComponent } from './turmas/turmas.component';
 import { FormTurmaComponent } from './turmas/form-turma.component';
 import { TurmaService } from './turmas/turma.service';
+import { AlunosComponent } from './alunos/alunos.component';
 
 @NgModule({
   imports: [
@@ -20,7 +21,8 @@ import { TurmaService } from './turmas/turma.service';
   declarations: [
     AppComponent,
     TurmasComponent,
-    FormTurmaComponent
+    FormTurmaComponent,
+    AlunosComponent
   ],
   providers: [
     TurmaService

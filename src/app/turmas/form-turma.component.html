@@ -13,31 +13,38 @@
       <div class="input-field col s12">
         <select materialize="material_select" [(ngModel)]="turma.coordenador" >
           <option value="" disabled selected></option>
-          <option value="1">Maria</option>
-          <option value="2">Tereza</option>
-          <option value="3">Zila</option>
+          <option value="Tereza">Tereza</option>
+          <option value="Maria">Maria</option>
+          <option value="Silvana">Silvana</option>
+          <option value="Gil">Gil</option>
+          <option value="Pedro">Pedro</option>
+          <option value="Marta">Marta</option>
         </select>
         <label>Coordenador(a)</label>
       </div>
       <div class="input-field col s12">
         <select materialize="material_select" [(ngModel)]="turma.periodo" >
           <option value="" disabled selected></option>
-          <option value="1">Manha</option>
-          <option value="2">Tarde</option>
-          <option value="3">Noite</option>
+          <option value="Manha">Manha</option>
+          <option value="Tarde">Tarde</option>
+          <option value="Noite">Noite</option>
         </select>
         <label>Periodo</label>
       </div>
       <div class="input-field col s12">
         <select materialize="material_select" [(ngModel)]="turma.etapa" >
           <option value="" disabled selected></option>
-          <option value="1">Infatil</option>
-          <option value="2">Fundamental</option>
-          <option value="3">Medio</option>
+          <option value="Infatil">Infatil</option>
+          <option value="Fundamental">Fundamental</option>
+          <option value="Medio">Medio</option>
         </select>
         <label>Etapa</label>
       </div>
       <div class="right-align">
+        <button *ngIf="turma.id" class="btn waves-effect waves-light red" (click)="delete()" >
+          Excluir
+        </button>
+
         <button class="btn waves-effect waves-light" (click)="save()" >
           Salvar
         </button>
