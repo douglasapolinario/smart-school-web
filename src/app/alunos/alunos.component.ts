@@ -1,15 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnChanges, OnInit} from '@angular/core';
+
+import { Aluno } from './aluno';
+import { Turma } from '../turmas/turma';
+import { AlunoService } from './aluno.service';
 
 @Component({
   selector: 'app-alunos',
   templateUrl: './alunos.component.html',
   styleUrls: ['./alunos.component.css']
 })
-export class AlunosComponent implements OnInit {
+export class AlunosComponent implements OnInit, OnChanges {
 
-  constructor() { }
+  @Input() turma: Turma;
+  alunos: Aluno[];
 
-  ngOnInit() {
+  constructor(private alunoService: AlunoService) { }
+
+  ngOnChanges() {
+    this.alunoService.getAllByTurma(this.turma)
+      .then(alunos => this.alunos = alunos);
   }
+
+  ngOnInit() { }
 
 }

@@ -10,6 +10,8 @@ import { TurmasComponent } from './turmas/turmas.component';
 import { FormTurmaComponent } from './turmas/form-turma.component';
 import { TurmaService } from './turmas/turma.service';
 import { AlunosComponent } from './alunos/alunos.component';
+import {AlunoService} from './alunos/aluno.service';
+import { DetalheAlunoComponent } from './alunos/detalhe-aluno.component';
 
 @NgModule({
   imports: [
@@ -22,10 +24,12 @@ import { AlunosComponent } from './alunos/alunos.component';
     AppComponent,
     TurmasComponent,
     FormTurmaComponent,
-    AlunosComponent
+    AlunosComponent,
+    DetalheAlunoComponent
   ],
   providers: [
-    TurmaService
+    TurmaService,
+    AlunoService
   ],
   bootstrap: [AppComponent]
 })

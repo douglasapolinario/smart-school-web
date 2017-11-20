@@ -1,7 +1,13 @@
 <div class="row">
   <div class="col s6 offset-s3">
-    <h4>Cadastro de Turma</h4>
-    <div class="row">
+    <h4>Turma</h4>
+
+    <ul class="tabs" materialize="tabs">
+      <li class="tab col s3"><a class="active" href="#cadastro">Cadastro</a></li>
+      <li class="tab col s3" [class.disabled]="isDisabled"><a href="#alunos">Alunos</a></li>
+    </ul>
+
+    <div id="cadastro" class="row">
       <div class="input-field col s6">
         <input id="ano_turma" type="number" class="validate" [(ngModel)]="turma.ano" >
         <label for="ano_turma">Ano</label>
@@ -40,15 +46,20 @@
         </select>
         <label>Etapa</label>
       </div>
-      <div class="right-align">
-        <button *ngIf="turma.id" class="btn waves-effect waves-light red" (click)="delete()" >
-          Excluir
-        </button>
+    </div>
 
-        <button class="btn waves-effect waves-light" (click)="save()" >
-          Salvar
-        </button>
-      </div>
+    <div id="alunos" class="row">
+      <app-alunos [turma]='turma' ></app-alunos>
+    </div>
+
+    <div class="right-align">
+      <button *ngIf="turma.id" class="btn waves-effect waves-light red" (click)="delete()" >
+        Excluir
+      </button>
+
+      <button class="btn waves-effect waves-light" (click)="save()" >
+        Salvar
+      </button>
     </div>
   </div>
 </div>
