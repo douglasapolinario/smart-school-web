@@ -10,8 +10,8 @@ import {DetalheAlunoComponent} from "../alunos/detalhe-aluno.component";
 const routes: Routes = [
   { path: '', redirectTo: '/turmas', pathMatch: 'full' },
   { path: 'turmas', component: TurmasComponent },
-  { path: 'form-turma', component: FormTurmaComponent },
-  { path: 'form-turma/:id', component: FormTurmaComponent },
+  { path: 'turma/new', component: FormTurmaComponent },
+  { path: 'turma/:id/edit', component: FormTurmaComponent },
   { path: 'aluno/:id', component: DetalheAlunoComponent }
 ];
 

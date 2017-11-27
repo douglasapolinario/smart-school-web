@@ -10,7 +10,7 @@
       </div>
       <div class="card-action">
           <a class="btn-floating btn-medium waves-effect waves-light blue"
-              [routerLink]="['/form-turma', turma.id]" >
+              [routerLink]="['/turma', turma.id, 'edit']" >
             <i class="large material-icons">mode_edit</i>
           </a>
       </div>
@@ -19,7 +19,7 @@
 </div>
 
 <div class="fixed-action-btn">
-  <a class="btn-floating btn-large red" routerLink="/form-turma">
+  <a class="btn-floating btn-large red" routerLink="/turma/new">
     <i class="large material-icons">add</i>
   </a>
 </div>
