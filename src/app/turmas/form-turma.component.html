@@ -10,11 +10,11 @@
     <div id="cadastro" class="row">
       <div class="input-field col s6">
         <input id="ano_turma" type="number" class="validate" [(ngModel)]="turma.ano" >
-        <label for="ano_turma">Ano</label>
+        <label for="ano_turma" [class.active]="isActive" >Ano</label>
       </div>
       <div class="input-field col s6">
         <input id="turma" type="text" class="validate" [(ngModel)]="turma.turma" >
-        <label for="turma">Turma</label>
+        <label for="turma" [class.active]="isActive" >Turma</label>
       </div>
       <div class="input-field col s12">
         <select materialize="material_select" [(ngModel)]="turma.coordenador" >

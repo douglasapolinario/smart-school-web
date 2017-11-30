@@ -16,6 +16,7 @@ export class FormTurmaComponent implements OnInit {
   @Input() turma: Turma = new Turma();
 
   isDisabled: boolean;
+  isActive: boolean;
 
   constructor(
     private turmaService: TurmaService,
@@ -29,8 +30,10 @@ export class FormTurmaComponent implements OnInit {
 
         if (isUndefined(this.turma.id)) {
           this.isDisabled = true;
+          this.isActive = false;
         } else {
           this.isDisabled = false;
+          this.isActive = true;
         }
       });
   }
