@@ -4,32 +4,25 @@ import { FormsModule } from '@angular/forms';
 
 import { MaterializeModule } from 'angular2-materialize';
 
-import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
-import { TurmasComponent } from './turmas/turmas.component';
-import { FormTurmaComponent } from './turmas/form-turma.component';
-import { TurmaService } from './turmas/turma.service';
-import { AlunosComponent } from './alunos/alunos.component';
-import {AlunoService} from './alunos/aluno.service';
-import { DetalheAlunoComponent } from './alunos/detalhe-aluno.component';
+import { TurmasModule } from './turmas/turmas.module';
+import { AlunosModule } from './alunos/alunos.module';
+import { AppComponent } from './app.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    MaterializeModule
+    MaterializeModule,
+    TurmasModule,
+    AlunosModule
   ],
   declarations: [
-    AppComponent,
-    TurmasComponent,
-    FormTurmaComponent,
-    AlunosComponent,
-    DetalheAlunoComponent
+    AppComponent
   ],
   providers: [
-    TurmaService,
-    AlunoService
+    
   ],
   bootstrap: [AppComponent]
 })

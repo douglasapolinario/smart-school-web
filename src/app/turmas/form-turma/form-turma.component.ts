@@ -3,8 +3,8 @@ import { ActivatedRoute, ParamMap } from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 import {isUndefined} from 'util';
 
-import { TurmaService } from './turma.service';
-import { Turma } from './turma';
+import { TurmaService } from '../turma.service';
+import { Turma } from '../turma';
 
 
 @Component({
