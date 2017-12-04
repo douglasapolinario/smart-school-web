@@ -5,7 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { MaterializeModule } from 'angular2-materialize';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
-import { TurmasModule } from './turmas/turmas.module';
 import { AlunosModule } from './alunos/alunos.module';
 import { AppComponent } from './app.component';
 
@@ -15,7 +14,6 @@ import { AppComponent } from './app.component';
     FormsModule,
     AppRoutingModule,
     MaterializeModule,
-    TurmasModule,
     AlunosModule
   ],
   declarations: [
