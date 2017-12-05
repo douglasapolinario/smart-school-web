@@ -49,15 +49,14 @@
     </div>
 
     <div id="alunos" class="row">
-      <!-- <app-alunos [turma]='turma' ></app-alunos> -->
       <div class="col s12">
         <div class="collection">
           <a class="collection-item" *ngFor="let aluno of turma.alunos, let i = index"
-              [routerLink]="['/aluno', aluno.id]">
+              [routerLink]="['/alunos', aluno.id]">
             {{ aluno.nome }}
           </a>
         </div>
-    
+
         <div class="collection" *ngIf="alunos?.length == 0">
           <a class="collection-item">
             Não existe alunos matriculados.

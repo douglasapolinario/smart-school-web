@@ -7,7 +7,7 @@ import { TurmasComponent } from './turmas.component';
 const routes: Routes = [
   { path: '', component: TurmasComponent },
   { path: 'new', component: FormTurmaComponent },
-  { path: ':id/edit', component: FormTurmaComponent }  
+  { path: ':id/edit', component: FormTurmaComponent }
 ];
 
 @NgModule({
