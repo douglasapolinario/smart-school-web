@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import {DetalheAlunoComponent} from './detalhe-aluno.component';
+import { FormAlunoComponent } from './form-aluno/form-aluno.component';
+
 
 const routes: Routes = [
-  { path: ':id', component: DetalheAlunoComponent }
+  { path: ':id', component: FormAlunoComponent }
 ];
 
 @NgModule({

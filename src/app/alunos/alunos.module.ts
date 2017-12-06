@@ -5,9 +5,8 @@ import { CommonModule } from '@angular/common';
 import { MaterializeModule } from 'angular2-materialize';
 
 import { AlunoService } from './aluno.service';
-import { DetalheAlunoComponent } from './detalhe-aluno.component';
-import { AlunosComponent } from './alunos.component';
 import { AlunosRoutingModule } from './alunos-routing.module';
+import { FormAlunoComponent } from './form-aluno/form-aluno.component';
 
 @NgModule({
   imports: [
@@ -17,11 +16,9 @@ import { AlunosRoutingModule } from './alunos-routing.module';
     AlunosRoutingModule
   ],
   declarations: [
-    AlunosComponent,
-    DetalheAlunoComponent
+    FormAlunoComponent
   ],
   exports: [
-    AlunosComponent
   ],
   providers: [
     AlunoService
