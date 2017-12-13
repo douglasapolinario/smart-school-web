@@ -20,4 +20,12 @@ export class AlunoService {
 
     return Promise.resolve(results);
   }
+
+  getById(id: number): Promise<Aluno> {
+    if (id === 0 ) {
+      return Promise.resolve(new Aluno());
+    } else {
+      return Promise.resolve(ALUNOS.find(aluno => aluno.id === id));
+    }
+  }
 }

@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { FormTurmaComponent } from './form-turma/form-turma.component';
+import { TurmaFormComponent } from './turma-form/turma-form.component';
 import { TurmasComponent } from './turmas.component';
 
 const routes: Routes = [
   { path: '', component: TurmasComponent },
-  { path: 'new', component: FormTurmaComponent },
-  { path: ':id/edit', component: FormTurmaComponent }
+  { path: 'new', component: TurmaFormComponent },
+  { path: ':id/edit', component: TurmaFormComponent }
 ];
 
 @NgModule({

@@ -6,6 +6,7 @@ import { MaterializeModule } from 'angular2-materialize';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { AppComponent } from './app.component';
     MaterializeModule
   ],
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

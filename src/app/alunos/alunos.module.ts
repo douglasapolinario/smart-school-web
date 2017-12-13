@@ -6,7 +6,7 @@ import { MaterializeModule } from 'angular2-materialize';
 
 import { AlunoService } from './aluno.service';
 import { AlunosRoutingModule } from './alunos-routing.module';
-import { FormAlunoComponent } from './form-aluno/form-aluno.component';
+import { FormAlunoComponent } from './aluno-form/aluno-form.component';
 
 @NgModule({
   imports: [

@@ -6,8 +6,8 @@ import { MaterializeModule } from 'angular2-materialize';
 
 import { TurmasRoutingModule } from './turmas-routing.module';
 import { TurmaService } from './turma.service';
-import { FormTurmaComponent } from './form-turma/form-turma.component';
 import { TurmasComponent } from './turmas.component';
+import { TurmaFormComponent } from './turma-form/turma-form.component';
 
 @NgModule({
   imports: [
@@ -18,7 +18,7 @@ import { TurmasComponent } from './turmas.component';
   ],
   declarations: [
     TurmasComponent,
-    FormTurmaComponent
+    TurmaFormComponent
   ],
   providers: [
     TurmaService
