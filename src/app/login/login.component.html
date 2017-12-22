@@ -1,17 +1,26 @@
-<div class="row">
-  <div class="col s6 offset-s3">
-    <h5>Login</h5>
+<form [formGroup]="formulario" >
+  <div class="row">
+    <div class="col s6 offset-s3">
+      <h5>Login</h5>
 
-    <div class="row">
-      <div class="input-field col s12">
-        <input id="usuario" type="text" class="validate" >
-        <label for="usuario">Usuario</label>
-      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="usuario" type="text" class="validate" formControlName="usuario" >
+          <label for="usuario">Usuario</label>
+        </div>
 
-      <div class="input-field col s12">
-        <input id="senha" type="password" class="validate" >
-        <label for="senha">Senha</label>
+        <div class="input-field col s12">
+          <input id="senha" type="password" class="validate" formControlName="senha" >
+          <label for="senha">Senha</label>
+        </div>
+
+        <div class="right-align">
+          <button class="btn waves-effect waves-light" (click)="login()" >
+            Entrar
+          </button>
+        </div>
+
       </div>
     </div>
   </div>
-</div>
+</form>
