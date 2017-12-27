@@ -20,7 +20,19 @@ export class LoginComponent implements OnInit {
   }
 
   login(): void {
-    console.log(this.formulario);
+
+    if (this.formulario.valid) {
+      console.log('Efetua login');
+    } else {
+      console.log(this.formulario);
+      Object.keys(this.formulario.controls).forEach(campo => {
+        this.formulario.get(campo).markAsTouched();
+      });
+    }
+  }
+
+  showCssError(campo) {
+    return !this.formulario.get(campo).valid && this.formulario.get(campo).touched;
   }
 
 }

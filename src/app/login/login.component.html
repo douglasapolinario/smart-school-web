@@ -5,12 +5,16 @@
 
       <div class="row">
         <div class="input-field col s12">
-          <input id="usuario" type="text" class="validate" formControlName="usuario" >
+          <input id="usuario" type="text" class="validate"
+                 [class.invalid]="showCssError('usuario')"
+                 formControlName="usuario" >
           <label for="usuario">Usuario</label>
         </div>
 
         <div class="input-field col s12">
-          <input id="senha" type="password" class="validate" formControlName="senha" >
+          <input id="senha" type="password" class="validate"
+                 [class.invalid]="showCssError('senha')"
+                 formControlName="senha" >
           <label for="senha">Senha</label>
         </div>
 
