@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,9 @@ export class LoginComponent implements OnInit {
 
   formulario: FormGroup;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,
+              private router: Router,
+              ) { }
 
   ngOnInit() {
     this.formulario = this.formBuilder.group({
@@ -23,6 +26,7 @@ export class LoginComponent implements OnInit {
 
     if (this.formulario.valid) {
       console.log('Efetua login');
+      this.router.navigate(['turmas']);
     } else {
       console.log(this.formulario);
       Object.keys(this.formulario.controls).forEach(campo => {
