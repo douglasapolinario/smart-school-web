@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
+import {LoginService} from './login.service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,
               private router: Router,
-              ) { }
+              private loginService: LoginService) { }
 
   ngOnInit() {
     this.formulario = this.formBuilder.group({
@@ -25,8 +26,10 @@ export class LoginComponent implements OnInit {
   login(): void {
 
     if (this.formulario.valid) {
-      console.log('Efetua login');
-      this.router.navigate(['turmas']);
+      console.log('Efetuando login');
+      this.loginService.getByEmailPassword(this.formulario.value.usuario, this.formulario.value.senha)
+        .then(result => this.router.navigate(['turmas']))
+        .catch(result => console.log('Erro no login'));
     } else {
       console.log(this.formulario);
       Object.keys(this.formulario.controls).forEach(campo => {

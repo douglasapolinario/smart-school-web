@@ -1,0 +1,22 @@
+<form [formGroup]="formulario" >
+  <div class="row">
+    <div class="col s6 offset-s3">
+      <h5>Recado</h5>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="origem" type="text" class="validate"
+                 [class.invalid]="showCssError('origem')"
+                 formControlName="origem" >
+          <label for="origem">De</label>
+        </div>
+      </div>
+
+      <div class="right-align">
+        <button class="btn waves-effect waves-light" (click)="enviar()" >
+          Enviar
+        </button>
+      </div>
+    </div>
+  </div>
+</form>

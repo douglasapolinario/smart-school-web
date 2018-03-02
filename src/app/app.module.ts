@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { LoginService } from './login/login.service';
+import { RecadosComponent } from './recados/recados.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { LoginService } from './login/login.service';
   ],
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    RecadosComponent
   ],
   providers: [
     LoginService
